@@ -1,0 +1,52 @@
+import type { Country } from '../types.ts';
+
+const O = 'Oceania' as const;
+
+export const oceania: Country[] = [
+  // ── Australia, NZ & Melanesia ──────────────────────────────────
+  { id: 'au', name: 'Australia', capital: 'Canberra', coord: [149.13, -35.28], continent: O, region: 'Australia, NZ & Melanesia',
+    hook: 'Not Sydney! Canberra was purpose-built as a compromise between rivals Sydney and Melbourne.',
+    flag: { colors: ['blue', 'white', 'red'], symbols: ['union-jack', 'star'] } },
+  { id: 'nz', name: 'New Zealand', aliases: ['Aotearoa'], capital: 'Wellington', coord: [174.78, -41.29], continent: O, region: 'Australia, NZ & Melanesia',
+    hook: 'Not Auckland! Windy Wellington is the southernmost capital of any country.',
+    flag: { colors: ['blue', 'red', 'white'], symbols: ['union-jack', 'star'] } },
+  { id: 'pg', name: 'Papua New Guinea', aliases: ['PNG'], capital: 'Port Moresby', coord: [147.18, -9.44], continent: O, region: 'Australia, NZ & Melanesia',
+    hook: 'Port Moresby is named after a British admiral. PNG has over 800 languages, more than any other country.',
+    flag: { colors: ['red', 'black', 'yellow', 'white'], symbols: ['diagonal', 'animal', 'star'] } },
+  { id: 'fj', name: 'Fiji', capital: 'Suva', coord: [178.44, -18.14], continent: O, region: 'Australia, NZ & Melanesia',
+    hook: 'Suva is on Viti Levu, Fiji’s biggest island. Fiji still has the Union Jack on its flag.', say: 'SOO-vah',
+    flag: { colors: ['blue', 'red', 'white', 'yellow'], symbols: ['union-jack', 'emblem'] } },
+  { id: 'sb', name: 'Solomon Islands', aliases: ['Solomons'], atlasName: 'Solomon Is.', capital: 'Honiara', coord: [159.96, -9.43], continent: O, region: 'Australia, NZ & Melanesia',
+    hook: 'Honiara is on Guadalcanal, where one of the biggest battles of WWII in the Pacific took place.', say: 'hoh-nee-AH-rah',
+    flag: { colors: ['blue', 'green', 'yellow', 'white'], symbols: ['diagonal', 'star'] } },
+  { id: 'vu', name: 'Vanuatu', capital: 'Port Vila', capitalAliases: ['Port-Vila', 'Vila'], coord: [168.32, -17.73], continent: O, region: 'Australia, NZ & Melanesia',
+    hook: 'Port Vila is on Efate island. Vanuatu’s flag has a curled pig’s tusk, a symbol of wealth.', say: 'port VEE-lah',
+    flag: { colors: ['red', 'green', 'black', 'yellow'], symbols: ['triangle', 'plant', 'emblem'] } },
+
+  // ── Micronesia & Polynesia ─────────────────────────────────────
+  { id: 'pw', name: 'Palau', capital: 'Ngerulmud', coord: [134.62, 7.5], continent: O, region: 'Micronesia & Polynesia',
+    hook: 'Not Koror! Ngerulmud took over in 2006 and is the least populated capital in the world, basically just the government buildings.', say: 'neh-ROOL-mood',
+    flag: { colors: ['blue', 'yellow'], symbols: ['disc'] } },
+  { id: 'fm', name: 'Micronesia', aliases: ['Federated States of Micronesia', 'FSM'], capital: 'Palikir', coord: [158.16, 6.92], continent: O, region: 'Micronesia & Polynesia',
+    hook: 'Palikir is on the island of Pohnpei. The four stars on the flag are the country’s four states.', say: 'PAH-lee-keer',
+    flag: { colors: ['blue', 'white'], symbols: ['star'] } },
+  { id: 'mh', name: 'Marshall Islands', aliases: ['Marshalls'], atlasName: 'Marshall Is.', capital: 'Majuro', coord: [171.38, 7.09], continent: O, region: 'Micronesia & Polynesia',
+    hook: 'Majuro is a ring-shaped coral atoll: the whole capital is a thin strip of land around a lagoon.', say: 'mah-JOO-roh',
+    flag: { colors: ['blue', 'orange', 'white'], symbols: ['diagonal', 'star'] } },
+  { id: 'nr', name: 'Nauru', capital: 'Yaren', coord: [166.92, -0.55], continent: O, region: 'Micronesia & Polynesia',
+    capitalNote: 'Nauru has no official capital; Yaren district holds the parliament and government offices.',
+    hook: 'Tiny Nauru (21 km²) uses Yaren district as its capital. The flag shows Nauru as a star just below the Equator.', say: 'YAH-ren',
+    flag: { colors: ['blue', 'yellow', 'white'], symbols: ['h-stripes', 'star'] } },
+  { id: 'ki', name: 'Kiribati', capital: 'South Tarawa', capitalAliases: ['Tarawa'], coord: [173.03, 1.33], continent: O, region: 'Micronesia & Polynesia',
+    hook: 'Tarawa is an atoll. Kiribati (say "KEER-ih-bass") is one of the first countries to see each New Year.', say: 'tah-RAH-wah',
+    flag: { colors: ['red', 'yellow', 'blue', 'white'], symbols: ['sun', 'animal'] } },
+  { id: 'tv', name: 'Tuvalu', capital: 'Funafuti', coord: [179.19, -8.52], continent: O, region: 'Micronesia & Polynesia',
+    hook: 'Funafuti: "fun-a-footy"! Tuvalu earns money by renting out its internet domain, ".tv".', say: 'foo-nah-FOO-tee',
+    flag: { colors: ['blue', 'red', 'white', 'yellow'], symbols: ['union-jack', 'star'] } },
+  { id: 'ws', name: 'Samoa', capital: 'Apia', coord: [-171.77, -13.83], continent: O, region: 'Micronesia & Polynesia',
+    hook: 'In 2011 Samoa jumped across the International Date Line and skipped 30 December entirely.', say: 'ah-PEE-ah',
+    flag: { colors: ['red', 'blue', 'white'], symbols: ['star'] } },
+  { id: 'to', name: 'Tonga', capital: "Nuku'alofa", capitalAliases: ['Nukualofa', 'Nukuʻalofa'], coord: [-175.2, -21.14], continent: O, region: 'Micronesia & Polynesia',
+    hook: 'Nuku’alofa means "abode of love". Tonga is a Pacific kingdom that was never colonized.', say: 'noo-koo-ah-LOH-fah',
+    flag: { colors: ['red', 'white'], symbols: ['cross'] } },
+];
